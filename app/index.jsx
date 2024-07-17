@@ -33,11 +33,11 @@ export default function App() {
             It's time for a fresh haircut!
           </Text>
 
-          {/* <CustomButton 
+          <CustomButton 
             title="Continue with email"
             handlePress={() => router.push('/sign-in')}
             containerStyles="w-full mt-7"
-          /> */}
+          />
         </View>
       </ScrollView>
 
