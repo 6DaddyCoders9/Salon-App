@@ -16,20 +16,20 @@ import { useGlobalContext } from "../../context/GlobalProvider";
 
 const Home = () => {
   const { user, setUser, setIsLogged } = useGlobalContext();
-  const { data: posts, refetch } = useAppwrite(getAllPosts);
+  // const { data: posts, refetch } = useAppwrite(getAllPosts);
 
-  const [refreshing, setRefreshing] = useState(false);
+  // const [refreshing, setRefreshing] = useState(false);
 
-  const onRefresh = async () => {
-    setRefreshing(true);
-    await refetch();
-    setRefreshing(false);
-  };
+  // const onRefresh = async () => {
+  //   setRefreshing(true);
+  //   await refetch();
+  //   setRefreshing(false);
+  // };
   return (
     <SafeAreaView className="bg-primary h-full">
       <FlatList
-        data={posts}
-        keyExtractor={(item) => item.$id}
+        // data={posts}
+        // keyExtractor={(item) => item.$id}
         ListHeaderComponent={() => (
           <View className="my-6 px-4 space-y-6">
             <View className="justify-between items-start flex-row mb-6">
@@ -56,9 +56,9 @@ const Home = () => {
             title="No Salon Found"
           />
         )}
-        refreshControl={
-          <RefreshControl refreshing={refreshing} onRefresh={onRefresh} />
-        }
+        // refreshControl={
+        //   <RefreshControl refreshing={refreshing} onRefresh={onRefresh} />
+        // }
       />
     </SafeAreaView>
   );
